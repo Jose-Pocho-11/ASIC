@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web</title>
+    <style>
+        table.borde {
+            border-collapse: collapse;
+            border-spacing: 0; /* Elimina espacio entre celdas */
+        }
+
+        table.border th, table.border td {
+            padding: 5px; /* Ajustado el padding a 5px para eliminar espacio entre celdas */
+            border: 1px solid black;
+        }
+
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin-top: 20px; /* Agregar margen arriba */
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #005f7a;
+        }
+
+        /* Estilo para eliminar espacio entre etiquetas y datos */
+        .tight-label {
+            display: inline-block;
+            margin-right: 5px; /* Ajustar espacio entre etiqueta y dato */
+        }
+
+        .tight-input {
+            display: inline-block;
+            border-bottom: 1px solid black;
+            min-width: 200px; /* Define un ancho mínimo para el input */
+            padding-left: 10px; /* Añade padding para un poco de espacio entre texto y línea */
+        }
+
+        .label-container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="0" style="width:100%">
+        <tr>
+            <td style="width: 20%;" align="center">
+            <img src="" alt=""> 
+            </td>
+            <td style="width: 60%;" align="center">
+                <table>
+                    <tr><td align="center">ASIC</td></tr>
+                    <tr><td align="center">Dirección: Maraven</td></tr>
+                    
+                </table>
+            </td>
+            <td style="width: 20%;">
+                <table class="border borde" style="width: 100%;">
+                    <tr><td align="center">Fecha: @Fecha</td></tr>
+                    <tr><td align="center">Tipo: Reporte</td></tr>
+                    <tr><td align="center">Categoría: @Categoria</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="20"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <!-- <table class="full-width">
+                    <tr>
+                        <td colspan="4" class="label-container">
+                            <span class="tight-label">Nombre:</span>
+                            <span class="tight-input">@Nombre</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="label-container">
+                            <span class="tight-label">Documento:</span>
+                            <span class="tight-input">@Documento</span>
+                        </td>
+                        <td colspan="1" class="label-container">
+                            <span class="tight-label">Firma:</span>
+                            <span class="tight-input"></span>
+                        </td>
+                    </tr>
+                </table> -->
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="border borde" style="width: 100%;">
+                    <thead style="background-color: #d8d8d8;">
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre del Medicamento</th>
+                            <th>Composición</th>
+                            <th>Medida</th>
+                            <th>Nombre Generico</th>
+                            <th>Lote</th>
+                            <th>Stock</th>
+                            <th>Categoria</th>
+                            <th>Presentacion</th>
+                            <th>Fecha de elaboración</th>
+                            <th>Fecha Caducidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @html
+                        <!-- Datos de ejemplo comentados -->
+                        <!--<tr>
+                            <td>1</td>
+                            <td>Producto 1</td>
+                            <td>10</td>
+                            <td>kg</td>
+                            <td>10,000 g</td>
+                            <td>g</td>
+                            <td>Categoría A</td>
+                        </tr>-->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <button onclick='window.print()'>Imprimir</button>
+</body>
+</html>
+
